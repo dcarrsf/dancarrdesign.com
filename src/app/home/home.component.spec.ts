@@ -5,7 +5,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 
-describe('Home Component', () => {
+describe('Route: Home', () => {
   const html = '<my-home></my-home>';
 
   beforeEach(() => {

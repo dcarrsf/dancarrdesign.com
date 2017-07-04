@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
 
-describe('About Component', () => {
+describe('Route: About', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({declarations: [AboutComponent]});
   });

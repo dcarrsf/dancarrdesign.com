@@ -7,7 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ApiService } from './shared/services/';
+import { ApiService, 
+         JsonService 
+} from './shared/services/';
+import { HeaderComponent, 
+         FooterComponent, 
+         NavbarComponent, 
+         LogoComponent 
+} from './shared/components';
 import { routing } from './app.routing';
 
 // Hot reloading
@@ -24,10 +31,15 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    HeaderComponent, 
+    FooterComponent, 
+    NavbarComponent, 
+    LogoComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    JsonService
   ],
   bootstrap: [AppComponent]
 })
