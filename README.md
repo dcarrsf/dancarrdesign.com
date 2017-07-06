@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-# ng-awesome
-This is an awesome project!
+# dancarrdesign.com
+Dan Carr Design splash page rebuilt with Angular2+, Typescript, Sass, Karma, Jasmine, and Webpack.
 
 ## How to get started
 
@@ -33,7 +32,3 @@ The project uses Karma as a test runner and Jasmine as the BDD test suite. In ad
 ```
 $ npm test
 ```
-=======
-# dancarrdesign.com
-Dan Carr Design splash page rebuilt with Angular2+, Typescript, Sass, Karma, Jasmine, and Webpack.
->>>>>>> 6c58351332daf2147528b92a5fa4714bbadabdfa
