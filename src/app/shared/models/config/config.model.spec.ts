@@ -1,8 +1,8 @@
-import { ConfigModel } from './config.model';
+import { ConfigVO } from './config.model';
 
-describe('Model: Config', () => {
+describe('Model: ConfigVO', () => {
   it('should create an instance', () => {
-    const model = new ConfigModel();
+    const model = new ConfigVO(0, 'test', './');
     expect(model).toBeTruthy();
   });
 });

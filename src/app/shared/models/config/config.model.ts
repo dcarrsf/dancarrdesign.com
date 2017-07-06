@@ -1,29 +1,9 @@
-// Define as constant
-const privateData = new WeakMap();
-
-// Class
-export class ConfigModel {
+// Model (Value object)
+export class ConfigVO {
   // --------------------------
   // PROPERTIES:
-  constructor() {
-    privateData.set(this, {
-      name: 'Name'
-    });
-  }
-  // --------------------------
-  // METHODS:
-
-  changeData() {
-    // do stuff...
-  }
-  // --------------------------
-  // GETTER/SETTERS:
-
-  set name(value) {
-    privateData.set(this, {name: value});
-  }
-
-  get name() {
-    return privateData.get(this).name;
-  }
+  constructor(
+    public id: number,
+    public name: string,
+    public url: string) { }
 }
