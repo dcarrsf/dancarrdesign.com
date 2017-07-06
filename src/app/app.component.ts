@@ -11,20 +11,26 @@ import '../style/app.scss';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title: string;
+  // Properties
   data: ConfigVO[];
+  title: string;
 
-  constructor(private api: ApiService, private json: JsonService) {
-    this.title = this.api.title;
-  }
+  // Constructor
+  constructor(
+    private api: ApiService,
+    private json: JsonService) {}
 
+  // Initialize
   ngOnInit() {
+    // Set title
+    this.title = this.api.strings.title;
+    // Get JSON config
     this.json.getConfig().subscribe(this.onSuccess, this.onError);
   }
 
+  // Event handlers
   private onSuccess(vos) {
     this.data = vos;
-    console.log(this.data);
   }
 
   private onError(error) {
