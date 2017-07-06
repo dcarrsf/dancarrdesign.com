@@ -1,8 +1,7 @@
   <nav class="navbar">
     <ul>
       <li *ngFor="let item of data">
-        <a ngIf="item.url.indexOf('http')" href="{{item.url}}" target="_blank">{{item.name}}</a>
-        <a ngIf="!item.url.indexOf('http')" [routerLink]="[{item.url}]">{{item.name}}</a>
+        <a href="{{item.url}}">{{item.name}}</a>
       </li>
     </ul>
   </nav>
