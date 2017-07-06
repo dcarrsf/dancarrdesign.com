@@ -27,7 +27,7 @@ $ npm run build
 
 ## How to run tests
 
-The project uses Karma as a test runner and Jasmine as the BDD test suite. In addition, we're using React's TestUtils and Enzyme to unit test the components in the app. Run the following command to view a single run of the application tests.
+The project uses Karma as a test runner and Jasmine as the BDD test suite. In addition, we're using Angular's testing module to unit test the components in the app. 
 
 ```
 $ npm test
