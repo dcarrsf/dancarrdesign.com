@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef } from '@angular/core';
 import { JsonService } from '../../../shared/services/';
 import { ConfigVO } from '../../../shared/models/config/config.model';
 
@@ -12,19 +13,20 @@ export class NavbarComponent implements OnInit {
   data: ConfigVO[];
 
   // Constructor
-  constructor(private json: JsonService) {}
+  constructor(
+    private ref: ChangeDetectorRef,
+    private json: JsonService) {}
 
   ngOnInit() {
     // Get JSON config
-    this.json.getConfig().subscribe(this.onSuccess, this.onError);
+    this.json.getConfig().subscribe((config) => {
+      this.data = config;
+      // the following is required, otherwise the view will not be updated
+      this.ref.detectChanges();
+    }, this.onError);
   }
 
   // Event handlers
-  private onSuccess(vos) {
-    this.data = vos;
-    console.log(vos);
-  }
-
   private onError(error) {
     console.log(error);
   }

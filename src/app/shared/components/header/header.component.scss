@@ -1,0 +1,19 @@
+.header {
+  height: 78px;
+  padding: 20px;
+  border: 1px dashed yellow;
+
+  &__left {
+    width: 25%;
+    height: 74px;
+    float: left;
+    border: 1px dashed white;
+  }
+  &__right {
+    width: 74%;
+    height: 74px;
+    float: right;
+    border: 1px dashed white;
+    text-align: right;
+  }
+}

@@ -5,15 +5,15 @@
     "url": "https://dancarr.io"
   }, {
     "id": 1,
-    "name": "Code",
-    "url": "https://www.github.com/dcarrsf"
-  }, {
-    "id": 2,
     "name": "Blog",
     "url": "http://blog.dancarr.co"
   }, {
-    "id": 3,
+    "id": 2,
     "name": "Linkedin",
     "url": "https://www.linkedin.com/in/dcarrsf"
+  }, {
+    "id": 3,
+    "name": "Contact",
+    "url": "contact"
   }
 ]
