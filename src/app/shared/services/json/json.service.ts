@@ -20,7 +20,8 @@ export class JsonService {
 
   private onSuccess(res: Response) {
     let body = res.json();
-    return body.data || { };
+    // Check for data wrapper
+    return (body.data || body || {});
   }
 
   private onError(error: Response | any) {

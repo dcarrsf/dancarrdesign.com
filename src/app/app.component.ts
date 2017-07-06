@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, JsonService } from './shared/services/';
+import { ConfigVO } from './shared/models/config/config.model';
 
 // External CSS
 import '../style/app.scss';
@@ -11,16 +12,22 @@ import '../style/app.scss';
 })
 export class AppComponent implements OnInit {
   title: string;
-  data: object;
+  data: ConfigVO[];
 
   constructor(private api: ApiService, private json: JsonService) {
     this.title = this.api.title;
   }
 
   ngOnInit() {
-    this.json.getConfig().subscribe((d) => {
-      console.log(d);
-      this.data = d;
-    });
+    this.json.getConfig().subscribe(this.onSuccess, this.onError);
+  }
+
+  private onSuccess(vos) {
+    this.data = vos;
+    console.log(this.data);
+  }
+
+  private onError(error) {
+    console.log(error);
   }
 }
