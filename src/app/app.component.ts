@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
 
   // Initialize
   ngOnInit() {
+    console.log(this.api);
     // Set title
     this.title = this.api.strings.title;
     // Get JSON config

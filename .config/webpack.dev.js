@@ -49,7 +49,7 @@ module.exports = {
       {
         test: /\.(scss|sass)$/,
         exclude: root('src', 'app'),
-        loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'postcss-loader', 'sass-loader']})
+        loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'resolve-url-loader', 'postcss-loader', 'sass-loader']})
       },
 
       // SASS required in src/app files will be merged in js files
@@ -57,6 +57,9 @@ module.exports = {
 
       // Support for .html as raw text
       {test: /\.html$/, loader: 'raw-loader',  exclude: root('src', 'public')},
+      
+      // Support for images
+      {test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader'},
 
       // Support for *.json files.
       {test: /\.json$/, loader: 'json-loader'},
