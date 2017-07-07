@@ -8,6 +8,6 @@ describe('Service: Api', () => {
   });
 
   it('should have the correct title', inject([ApiService], (api) => {
-    expect(api.title).toBe('Angular 2');
+    expect(api.strings.title).toBe('Senior Software Engineer');
   }));
 });
