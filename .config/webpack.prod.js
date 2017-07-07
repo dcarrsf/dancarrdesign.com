@@ -6,6 +6,7 @@ const root = require('./helper');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -59,7 +60,7 @@ module.exports = {
       {test: /\.html$/, loader: 'raw-loader',  exclude: root('src', 'public')},
       
       // Support for images
-      {test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader'},
+      {test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader'}, // todo: fix extra output of hashed image
 
       // Support for *.json files.
       {test: /\.json$/, loader: 'json-loader'},
@@ -106,6 +107,16 @@ module.exports = {
 
     // Only emit files when there are no errors
     new webpack.NoEmitOnErrorsPlugin(),
+
+    // new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new CompressionPlugin({   
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    }),
 
     // Tslint configuration for webpack 2
     new webpack.LoaderOptionsPlugin({
