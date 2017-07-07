@@ -6,19 +6,25 @@ import { ApiService } from './shared/services/';
 import { AppComponent } from './app.component';
 
 describe('App', () => {
-  // provide our implementations or mocks to the dependency injector
+  // Fixture
+  const html = `
+  <main>
+    <router-outlet></router-outlet>
+  </main>`;
+  
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [AppComponent],
       providers: [ApiService, provideRoutes([])]
     });
+    TestBed.overrideComponent(AppComponent, { set: { template: html }});
   });
 
-  it('should have an url', () => {
+  it('should have an title', () => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    expect(fixture.debugElement.componentInstance.url).toEqual('https://github.com/preboot/angular2-webpack');
+    expect(fixture.debugElement.componentInstance.title).toEqual('Senior Software Engineer');
   });
 
 });
