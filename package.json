@@ -1,7 +1,7 @@
 {
-  "name": "ng-awesome",
+  "name": "dancarrdesign.com",
   "author": "Dan Carr",
-  "description": "This is an awesome project!",
+  "description": "Dan Carr Design splash page rebuilt with Angular2+, Typescript, Sass, Karma, Jasmine, and Webpack.",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -49,10 +49,12 @@
     "karma-coverage": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-mocha-reporter": "^2.0.3",
+    "karma-phantomjs-launcher": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "2.0.2",
     "node-sass": "^4.5.0",
     "null-loader": "0.1.1",
+    "phantomjs": "^2.1.7",
     "postcss-loader": "^1.1.0",
     "raw-loader": "0.5.1",
     "resolve-url-loader": "^2.1.0",
