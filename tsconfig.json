@@ -6,9 +6,9 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "noEmitHelpers": true,
+    "noStrictGenericChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noStrictGenericChecks": true,
     "lib": ["es2015", "dom"]
   },
   "compileOnSave": false,
