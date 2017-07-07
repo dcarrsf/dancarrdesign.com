@@ -1,6 +1,8 @@
 # dancarrdesign.com
 Dan Carr Design splash page rebuilt with Angular2+, Typescript, Sass, Karma, Jasmine, and Webpack.
 
+![Screenshot](/img/dcd-splash.jpg)
+
 ## How to get started
 
 The project uses Webpack to bundle and transpile the source code to a browser friendly format. You can run the project in two modes (dev and build). Run the following command to install dependencies, then choose a build mode.
