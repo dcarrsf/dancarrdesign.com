@@ -1,25 +1,27 @@
-// This shows a different way of testing a component, check about for a simpler one
-import { Component } from '@angular/core';
-
-import { TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { ApiService } from '../shared/services';
 
 describe('Route: Home', () => {
-  const html = '<my-home></my-home>';
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ HomeComponent ],
+      providers: [ApiService]
+    })
+    .compileComponents();
+  }));
 
   beforeEach(() => {
-    TestBed.configureTestingModule({declarations: [HomeComponent, TestComponent]});
-    TestBed.overrideComponent(TestComponent, { set: { template: html }});
-  });
-
-  it('should show text', () => {
-    const fixture = TestBed.createComponent(TestComponent);
+    fixture = TestBed.createComponent(HomeComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
-    expect(fixture.nativeElement.children[0].textContent).toContain('Home Works!');
   });
 
+  it('should be created', () => {
+    expect(component).toBeTruthy();
+  });
 });
-
-@Component({selector: 'my-test', template: ''})
-class TestComponent { }
