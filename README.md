@@ -21,7 +21,7 @@ $ npm start
 
 ### Production
 
-Build mode sets the environment to 'production' and optimizes the bundle for deployment. The files are optimized by using Webpack plugins and GZipping the resulting bundle. Run the following command and view the files in the build folder.
+Build mode sets the environment to *'production'* and optimizes the bundle for deployment. The files are optimized by using Webpack plugins and Gzipping the resulting bundle. Run the following command and view the files in the *./dist* folder.
 
 ```
 $ npm run build
@@ -29,7 +29,7 @@ $ npm run build
 
 ## How to run tests
 
-The project uses Karma as a test runner and Jasmine as the BDD test suite. In addition, we're using Angular's testing module to unit test the components in the app. 
+The project uses Karma as a test runner and Jasmine as the BDD test suite. In addition, the project uses Angular's testing tools to unit test the components in the app. 
 
 ```
 $ npm test
