@@ -13,7 +13,7 @@ const css = {
   backgroundPosition: 'center center',
   backgroundSize: 'cover',
   zIndex: -10,
-  transition: 'opacity 3s',
+  transition: 'opacity 2s',
   opacity: 0
 };
 
@@ -42,14 +42,12 @@ const loadImage = (url, callback) => {
 })
 export class BackgroundDirective {
 
-  constructor(el: ElementRef) {
-    console.log('load: start');
+  constructor(private el: ElementRef) {
     // Apply styles
-    addStyles(el, css);
+    addStyles(this.el, css);
     // Load image
     loadImage(bg, () => {
-      console.log('load: complete');
-      updateStyles(el, 1);
+      updateStyles(this.el, 1);
     });
   }
 }
