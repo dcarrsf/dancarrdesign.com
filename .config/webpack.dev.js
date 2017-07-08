@@ -42,7 +42,7 @@ module.exports = {
       {
         test: /\.ts$/,
         loaders: ['awesome-typescript-loader', 'angular2-template-loader', '@angularclass/hmr-loader'],
-        exclude: [/\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/]
+        exclude: [/\.spec.ts$/, /node_modules\/(?!(ng2-.+))/]
       },
 
       // SASS in src/style will be bundled in an external css file
