@@ -1,1 +1,1 @@
-export * from './uppercase/uppercase.directive';
+export * from './uppercase/uppercase.pipe';
