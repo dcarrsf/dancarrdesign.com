@@ -5,9 +5,9 @@ export class ApiService {
   // todo: load strings from external file
   public get strings() {
     return {
-      logo: 'DAN CARR',
+      logo: 'Dan Carr',
       title: 'Senior Software Engineer',
-      banner: 'WEB DEVELOPMENT & TRAINING',
+      banner: 'Web Development & Training',
       tag: 'Dan Carr Design'
     };
   };

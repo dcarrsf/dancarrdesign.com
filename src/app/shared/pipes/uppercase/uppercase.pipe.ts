@@ -8,5 +8,4 @@ export class UppercasePipe implements PipeTransform {
   transform(value: string): string {
     return value.toUpperCase();
   }
-
 }
