@@ -1,7 +1,8 @@
   <nav class="navbar">
     <ul>
       <li *ngFor="let item of data">
-        <a href="{{item.url}}">{{item.name | uppercase}}</a>
+        <a *ngIf="item.url.indexOf('http') > -1" href="{{item.url}}">{{item.name | uppercase}}</a>
+        <a *ngIf="item.url.indexOf('http') === -1" [routerLink]="item.url">{{item.name | uppercase}}</a>
       </li>
     </ul>
   </nav>
