@@ -23,7 +23,7 @@ const addStyles = (el, styles) => {
   });
 };
 
-const updateStyles = (el, alpha) => {
+const updateAlpha = (el, alpha) => {
   el.nativeElement.style.opacity = alpha;
 };
 
@@ -38,7 +38,7 @@ const loadImage = (url, callback) => {
 };
 
 @Directive({
-  selector: '[bgImg]'
+  selector: '[backgroundImage]'
 })
 export class BackgroundDirective {
 
@@ -47,7 +47,7 @@ export class BackgroundDirective {
     addStyles(this.el, css);
     // Load image
     loadImage(bg, () => {
-      updateStyles(this.el, 1);
+      updateAlpha(this.el, 1);
     });
   }
 }

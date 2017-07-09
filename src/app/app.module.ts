@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { BackgroundDirective } from './shared/directives';
 import { ApiService, JsonService } from './shared/services';
+import { UppercasePipe } from './shared/pipes'
 import { HeaderComponent, NavbarComponent, LogoComponent } from './shared/components';
 import { routing } from './app.routing';
 
@@ -25,12 +26,13 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
   ],
   declarations: [
     AppComponent,
-    BackgroundDirective,
     HomeComponent,
     ContactComponent,
     HeaderComponent,
     NavbarComponent,
-    LogoComponent
+    LogoComponent,
+    UppercasePipe,
+    BackgroundDirective
   ],
   providers: [
     ApiService,
