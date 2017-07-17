@@ -1,0 +1,31 @@
+.contact {
+  padding: 20px;
+
+  h2 {
+    position: fixed;
+    bottom: 30px;
+    left: 10%;
+    max-width: 750px;
+    font-size: 110px;
+    font-weight: 600;
+    letter-spacing: -10px;
+    line-height: 128px;
+  }
+  p {
+    position: fixed;
+    bottom: 30px;
+    left: 11%;
+    max-width: 750px;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 35px;
+
+    a {
+      color: orange;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
